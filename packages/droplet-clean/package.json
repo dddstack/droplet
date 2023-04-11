@@ -2,9 +2,6 @@
   "name": "@dddstack/droplet-clean",
   "version": "0.0.1",
   "type": "module",
-  "publishConfig": {
-    "access": "public"
-  },
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
@@ -26,5 +23,8 @@
     "typescript": "^5.0.4",
     "vite-tsconfig-paths": "^4.0.8",
     "vitest": "^0.29.8"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

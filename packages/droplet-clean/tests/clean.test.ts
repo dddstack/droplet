@@ -8,6 +8,4 @@ describe("clean", () =>
       clean(
         `${DROPLET_TEMPLATE_PREFIX}droplet_directory_nested/droplet_directory_nested/droplet_template_template`
       )
-    ).toEqual("nested/nested/template")
-  )
-);
+    ).toEqual("nested/nested/template")));

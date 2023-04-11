@@ -1,5 +1,11 @@
 import { log } from "@dddstack/droplet-log";
-import { copyFileSync, existsSync, lstatSync, mkdirSync, readdirSync } from "fs";
+import {
+  copyFileSync,
+  existsSync,
+  lstatSync,
+  mkdirSync,
+  readdirSync
+} from "fs";
 import { join } from "path";
 
 export const copy = (copyDirectory: string, toDirectory: string) =>

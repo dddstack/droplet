@@ -2,9 +2,6 @@
   "name": "@dddstack/droplet-log",
   "version": "0.0.1",
   "type": "module",
-  "publishConfig": {
-    "access": "public"
-  },
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
@@ -15,11 +12,14 @@
     "build:watch": "tsup --watch",
     "test:typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "chalk": "4.1.2"
+  },
   "devDependencies": {
     "tsup": "^6.7.0",
     "typescript": "^5.0.4"
   },
-  "dependencies": {
-    "chalk": "4.1.2"
+  "publishConfig": {
+    "access": "public"
   }
 }

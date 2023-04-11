@@ -1,7 +1,9 @@
 import type { listTemplates } from "@dddstack/droplet-list-templates";
-import { PromptObject } from "prompts";
+import type { PromptObject } from "prompts";
 
-export const promptTemplates = (templateChoices: ReturnType<typeof listTemplates>): PromptObject => ({
+export const promptTemplates = (
+  templateChoices: ReturnType<typeof listTemplates>
+): PromptObject => ({
   choices: templateChoices.map((templateChoice) => ({
     title: templateChoice.trimmedCleaned,
     value: templateChoice

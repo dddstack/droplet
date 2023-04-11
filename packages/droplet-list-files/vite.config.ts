@@ -1,10 +1,10 @@
-import { defineConfig } from "vitest/config";
 import tsconfigPaths from "vite-tsconfig-paths";
+import { defineConfig } from "vitest/config";
 
 const config = defineConfig({
   plugins: [tsconfigPaths({ loose: true })],
   test: {
-    globals: true,
+    globals: true
   }
 });
 

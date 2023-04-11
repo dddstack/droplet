@@ -2,9 +2,6 @@
   "name": "@dddstack/droplet-compile",
   "version": "0.0.1",
   "type": "module",
-  "publishConfig": {
-    "access": "public"
-  },
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
@@ -24,5 +21,8 @@
     "tsup": "^6.7.0",
     "typescript": "^5.0.4",
     "vitest": "^0.29.8"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

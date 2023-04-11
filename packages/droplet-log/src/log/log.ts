@@ -1,5 +1,5 @@
-import { Log } from "../log.types";
-import { LogType } from "../logType.types";
+import type { Log } from "../log.types";
+import type { LogType } from "../logType.types";
 import { logBasic } from "./logBasic";
 import { logError } from "./logError";
 import { logFile } from "./logFile";

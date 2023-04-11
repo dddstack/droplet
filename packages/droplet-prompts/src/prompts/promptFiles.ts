@@ -1,7 +1,9 @@
 import type { listFiles } from "@dddstack/droplet-list-files";
-import { PromptObject } from "prompts";
+import type { PromptObject } from "prompts";
 
-export const promptFiles = (fileChoices: ReturnType<typeof listFiles>): PromptObject => ({
+export const promptFiles = (
+  fileChoices: ReturnType<typeof listFiles>
+): PromptObject => ({
   choices: fileChoices.map((fileChoice) => ({
     title: fileChoice.trimmedCleaned,
     value: fileChoice
