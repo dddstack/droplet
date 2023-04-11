@@ -5,11 +5,19 @@ import { listTemplates } from "@dddstack/droplet-list-templates";
 import { log } from "@dddstack/droplet-log";
 import { Options } from "@dddstack/droplet-options";
 import { promptDroplet, promptFiles, promptTemplates, promptTo } from "@dddstack/droplet-prompts";
+import chalk from "chalk";
+import { existsSync } from "fs";
 import { join } from "path";
+import { exit } from "process";
 import prompts from "prompts";
 
 export const template = (options: Options) => {
   const DROPLET_DIRECTORY_PATH = join(options.fromDirectory, DROPLET_DIRECTORY_NAME);
+
+  if (!existsSync(DROPLET_DIRECTORY_PATH)) {
+    log({ message: `Droplet not found...To initialize Droplet, please run:\n\n${chalk.bold("droplet init")}\n`, type: "error" });
+    exit(1);
+  }
 
   prompts([
     promptTemplates(listTemplates(DROPLET_DIRECTORY_PATH)),
@@ -18,10 +26,12 @@ export const template = (options: Options) => {
   ]).then((answers) => {
     const { template, to, droplet } = answers;
 
-    log({ command: "TEMPLATE", message: "Dropletting template...", status: 1, statusOf: 2, type: "status" });
+    if (template && to && droplet) {
+      log({ command: "TEMPLATE", message: "Dropletting template...", status: 1, statusOf: 2, type: "status" });
 
-    drop(droplet, listFiles(join(DROPLET_DIRECTORY_PATH, template)), to, "template");
+      drop(droplet, listFiles(template.original, join(DROPLET_DIRECTORY_PATH, template.trimmed)), to, "template");
 
-    log({ command: "TEMPLATE", message: "Droplet complete!", status: 2, statusOf: 2, type: "status" });
+      log({ command: "TEMPLATE", message: "Droplet complete!", status: 2, statusOf: 2, type: "status" });
+    }
   });
 };

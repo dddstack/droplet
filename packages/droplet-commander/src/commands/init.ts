@@ -21,9 +21,9 @@ export const init = (options: Options) => {
 
   mkdirSync(dropletDirectory);
 
-  log({ command: "INIT", message: "Starting Droplet...", status: 2, statusOf: 3, type: "status" });
+  log({ command: "INIT", message: "Initializing Droplet...", status: 2, statusOf: 3, type: "status" });
 
   copy(PUBLIC_INIT_DIRECTORY_PATH, dropletDirectory);
 
-  log({ command: "INIT", message: "Droplet initialized!", status: 3, statusOf: 3, type: "status" });
+  log({ command: "INIT", message: `Droplet initialized at ${dropletDirectory}`, status: 3, statusOf: 3, type: "status" });
 };
