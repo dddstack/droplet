@@ -1,6 +1,23 @@
 {
   "name": "@dddstack/droplet",
   "version": "0.0.2",
+  "description": "A simple code generation tool for complex codebases.",
+  "keywords": [
+    "code-generation",
+    "commander",
+    "prompts"
+  ],
+  "homepage": "https://github.com/dddstack/droplet",
+  "bugs": {
+    "url": "https://github.com/dddstack/droplet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dddstack/droplet",
+    "directory": "packages/droplet"
+  },
+  "license": "MIT",
+  "author": "ddddurk <ddddurk@proton.me>",
   "type": "module",
   "exports": "./dist/package/index.js",
   "types": "./dist/package/index.d.ts",
