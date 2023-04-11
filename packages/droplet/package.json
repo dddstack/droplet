@@ -8,8 +8,8 @@
   "bin": {
     "droplet": "./dist/bin/index.js"
   },
-  "exports": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "exports": "./dist/package/index.js",
+  "types": "./dist/package/index.d.ts",
   "files": [
     "./dist"
   ],
