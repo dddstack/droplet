@@ -1,6 +1,6 @@
 {
   "name": "@dddstack/droplet-list-files",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -15,9 +15,9 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@dddstack/droplet-clean": "0.0.0",
-    "@dddstack/droplet-constants": "0.0.0",
-    "@dddstack/droplet-trim": "0.0.0"
+    "@dddstack/droplet-clean": "0.0.1",
+    "@dddstack/droplet-constants": "0.0.1",
+    "@dddstack/droplet-trim": "0.0.1"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
