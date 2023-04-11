@@ -1,5 +1,15 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig.json",
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "ES2022",
+    "moduleResolution": "node",
+    "paths": {
+      "@tests": [
+        "./tests/src"
+      ]
+    }
+  },
   "exclude": [
     "node_modules"
   ]
