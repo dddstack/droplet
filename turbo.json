@@ -9,7 +9,11 @@
     "build:watch": {
       "cache": false
     },
+    "test": {},
     "test:typecheck": {
+      "cache": false
+    },
+    "test:watch": {
       "cache": false
     }
   }

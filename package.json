@@ -8,7 +8,9 @@
   "scripts": {
     "build": "turbo run build",
     "build:watch": "turbo run build:watch",
-    "test:typecheck": "turbo run test:typecheck"
+    "test": "turbo run test",
+    "test:typecheck": "turbo run test:typecheck",
+    "test:watch": "turbo run test:watch"
   },
   "devDependencies": {
     "turbo": "^1.8.8",
