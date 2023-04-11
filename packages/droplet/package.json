@@ -1,4 +1,25 @@
 {
   "name": "@dddstack/droplet",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "type": "module",
+  "bin": {
+    "droplet": "./dist/bin/index.js"
+  },
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "./dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "build:watch": "tsup --watch",
+    "test:typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@dddstack/droplet-commander": "0.0.0"
+  },
+  "devDependencies": {
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4"
+  }
 }
