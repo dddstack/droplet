@@ -6,14 +6,14 @@ import { basename, dirname, join } from "path";
 
 export const drop = (droplet: string, fileChoices: ReturnType<typeof listFiles>, toDirectory: string, type: "file" | "template") =>
   fileChoices.map((fileChoice) => {
-    const toDirectoryFile = compile(droplet, join(toDirectory, type === "file" ? basename(fileChoice.trimmedCleaned) : fileChoice.trimmedCleaned));
+    const toDirectoryFile = compile(join(toDirectory, type === "file" ? basename(fileChoice.trimmedCleaned) : fileChoice.trimmedCleaned), droplet);
     const toDirectoryDirectory = dirname(toDirectoryFile);
 
     if (!existsSync(toDirectoryDirectory)) mkdirSync(toDirectoryDirectory, { recursive: true });
 
     writeFileSync(
       toDirectoryFile,
-      compile(droplet, readFileSync(fileChoice.original, "utf8"))
+      compile(readFileSync(fileChoice.original, "utf8"), droplet)
     );
 
     log({ file: toDirectoryFile, type: "file" });
