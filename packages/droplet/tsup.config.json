@@ -4,7 +4,7 @@
   "dts": true,
   "entry": [
     "bin/index.ts",
-    "src/index.ts"
+    "package/index.ts"
   ],
   "format": [
     "esm"
