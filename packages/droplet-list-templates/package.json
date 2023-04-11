@@ -12,7 +12,9 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@dddstack/droplet-constants": "0.0.0"
+    "@dddstack/droplet-clean": "0.0.0",
+    "@dddstack/droplet-constants": "0.0.0",
+    "@dddstack/droplet-trim": "0.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
