@@ -8,14 +8,22 @@
   "scripts": {
     "build": "turbo run build",
     "build:watch": "turbo run build:watch",
+    "chore:changeset": "changeset",
+    "ci:publish": "yarn build && changeset publish",
+    "ci:publish:snapshot": "yarn build && changeset publish --tag snapshot",
+    "ci:version": "changeset version",
+    "ci:version:snapshot": "changeset version --snapshot snapshot",
+    "droplet": "droplet",
     "test": "turbo run test",
-    "test:typecheck": "turbo run test:typecheck",
+    "test:typecheck": "turbo run typecheck",
     "test:watch": "turbo run test:watch"
   },
   "dependencies": {
     "@dddstack/droplet": "*"
   },
   "devDependencies": {
+    "@changesets/changelog-git": "^0.1.14",
+    "@changesets/cli": "^2.26.1",
     "turbo": "^1.8.8",
     "typescript": "^5.0.4"
   }
