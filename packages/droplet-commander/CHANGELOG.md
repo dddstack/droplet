@@ -1,5 +1,15 @@
 # @dddstack/droplet-commander
 
+## 0.0.3
+
+### Patch Changes
+
+- Updated dependencies [4932800]
+  - @dddstack/droplet-list-files@0.0.3
+  - @dddstack/droplet-list-templates@0.0.3
+  - @dddstack/droplet-drop@0.0.3
+  - @dddstack/droplet-prompts@0.0.3
+
 ## 0.0.2
 
 ### Patch Changes

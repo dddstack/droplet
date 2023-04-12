@@ -1,6 +1,6 @@
 {
   "name": "@dddstack/droplet-commander",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "@dddstack/droplet-commander for @dddstack/droplet.",
   "keywords": [],
   "homepage": "https://github.com/dddstack/droplet",
@@ -28,13 +28,13 @@
   "dependencies": {
     "@dddstack/droplet-constants": "0.0.2",
     "@dddstack/droplet-copy": "0.0.2",
-    "@dddstack/droplet-drop": "0.0.2",
+    "@dddstack/droplet-drop": "0.0.3",
     "@dddstack/droplet-gradient": "0.0.2",
-    "@dddstack/droplet-list-files": "0.0.2",
-    "@dddstack/droplet-list-templates": "0.0.2",
+    "@dddstack/droplet-list-files": "0.0.3",
+    "@dddstack/droplet-list-templates": "0.0.3",
     "@dddstack/droplet-log": "0.0.2",
     "@dddstack/droplet-options": "0.0.2",
-    "@dddstack/droplet-prompts": "0.0.2",
+    "@dddstack/droplet-prompts": "0.0.3",
     "chalk": "^5.2.0",
     "commander": "^10.0.0",
     "prompts": "^2.4.2"

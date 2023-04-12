@@ -1,5 +1,14 @@
 # @dddstack/droplet-list-templates
 
+## 0.0.3
+
+### Patch Changes
+
+- 4932800: chore(deps): update maintenance
+- Updated dependencies [4932800]
+  - @dddstack/droplet-clean@0.0.3
+  - @dddstack/droplet-trim@0.0.3
+
 ## 0.0.2
 
 ### Patch Changes
