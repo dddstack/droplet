@@ -1,5 +1,11 @@
 # @dddstack/droplet-commander
 
+## 0.0.5
+
+### Patch Changes
+
+- c625e7a: Wrap actions.
+
 ## 0.0.4
 
 ### Patch Changes
