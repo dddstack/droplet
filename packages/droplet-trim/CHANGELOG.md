@@ -1,5 +1,11 @@
 # @dddstack/droplet-trim
 
+## 0.0.3
+
+### Patch Changes
+
+- 4932800: chore(deps): update maintenance
+
 ## 0.0.2
 
 ### Patch Changes

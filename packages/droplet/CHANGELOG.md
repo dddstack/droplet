@@ -1,5 +1,12 @@
 # @dddstack/droplet
 
+## 0.0.4
+
+### Patch Changes
+
+- 4932800: chore(deps): update maintenance
+  - @dddstack/droplet-commander@0.0.3
+
 ## 0.0.3
 
 ### Patch Changes
