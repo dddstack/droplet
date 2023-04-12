@@ -30,7 +30,7 @@ export const listTemplates = (
           };
 
         if (pathPath.startsWith(DROPLET_DIRECTORY_NAME))
-          return listTemplates(joinedPathPathPath);
+          return listTemplates(joinedPathPathPath, rootPath ?? path);
       }
       return [];
     })
