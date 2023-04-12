@@ -1,9 +1,9 @@
-import { gradient } from "@dddstack/droplet-gradient";
 import type { Options } from "@dddstack/droplet-options";
 import { Command } from "commander";
 import { cwd } from "process";
 
 import { files, init, template } from "./commands";
+import { wrapAction } from "./utilities";
 
 export const commander = (
   options: Options = { fromDirectory: cwd(), toDirectory: cwd() }
@@ -15,19 +15,17 @@ export const commander = (
   program
     .command("files")
     .description("Droplet files.")
-    .action(() => files(options));
+    .action(() => wrapAction(() => files(options)));
 
   program
     .command("init")
     .description("Initialize Droplet")
-    .action(() => init(options));
+    .action(() => wrapAction(() => init(options)));
 
   program
     .command("template")
     .description("Droplet template.")
-    .action(() => template(options));
-
-  program.hook("preAction", () => gradient());
+    .action(() => wrapAction(() => template(options)));
 
   return program;
 };
