@@ -20,7 +20,7 @@
     "ci:version:snapshot": "changeset version --snapshot snapshot",
     "prepare": "husky install",
     "test": "turbo run test",
-    "test:typecheck": "turbo run typecheck",
+    "test:typecheck": "turbo run test:typecheck",
     "test:watch": "turbo run test:watch"
   },
   "dependencies": {
