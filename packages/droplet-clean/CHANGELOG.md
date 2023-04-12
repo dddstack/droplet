@@ -1,5 +1,13 @@
 # @dddstack/droplet-clean
 
+## 0.0.2
+
+### Patch Changes
+
+- 7f5cbd8: Lint, add packageJSON information.
+- Updated dependencies [7f5cbd8]
+  - @dddstack/droplet-constants@0.0.2
+
 ## 0.0.1
 
 ### Patch Changes

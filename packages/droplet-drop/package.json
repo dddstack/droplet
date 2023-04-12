@@ -1,6 +1,6 @@
 {
   "name": "@dddstack/droplet-drop",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "@dddstack/droplet-drop for @dddstack/droplet.",
   "keywords": [],
   "homepage": "https://github.com/dddstack/droplet",
@@ -26,9 +26,9 @@
     "test:typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@dddstack/droplet-compile": "0.0.1",
-    "@dddstack/droplet-list-files": "0.0.1",
-    "@dddstack/droplet-log": "0.0.1"
+    "@dddstack/droplet-compile": "0.0.2",
+    "@dddstack/droplet-list-files": "0.0.2",
+    "@dddstack/droplet-log": "0.0.2"
   },
   "devDependencies": {
     "tsup": "^6.7.0",
