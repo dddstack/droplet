@@ -13,8 +13,9 @@ describe("listTemplates", () =>
           TESTS_DROPLET_DIRECTORY_PATH,
           "droplet_directory_nested/droplet_directory_nested/droplet_template_template"
         ),
-        trimmed: "/droplet_template_template",
-        trimmedCleaned: "/template"
+        trimmed:
+          "/droplet_directory_nested/droplet_directory_nested/droplet_template_template",
+        trimmedCleaned: "/nested/nested/template"
       },
       {
         cleaned: "{{droplet}}",
@@ -22,8 +23,9 @@ describe("listTemplates", () =>
           TESTS_DROPLET_DIRECTORY_PATH,
           "droplet_directory_nested/droplet_directory_nested/droplet_template_{{droplet}}"
         ),
-        trimmed: "/droplet_template_{{droplet}}",
-        trimmedCleaned: "/{{droplet}}"
+        trimmed:
+          "/droplet_directory_nested/droplet_directory_nested/droplet_template_{{droplet}}",
+        trimmedCleaned: "/nested/nested/{{droplet}}"
       },
       {
         cleaned: "template",
@@ -31,8 +33,8 @@ describe("listTemplates", () =>
           TESTS_DROPLET_DIRECTORY_PATH,
           "droplet_directory_nested/droplet_template_template"
         ),
-        trimmed: "/droplet_template_template",
-        trimmedCleaned: "/template"
+        trimmed: "/droplet_directory_nested/droplet_template_template",
+        trimmedCleaned: "/nested/template"
       },
       {
         cleaned: "{{droplet}}",
@@ -40,8 +42,8 @@ describe("listTemplates", () =>
           TESTS_DROPLET_DIRECTORY_PATH,
           "droplet_directory_nested/droplet_template_{{droplet}}"
         ),
-        trimmed: "/droplet_template_{{droplet}}",
-        trimmedCleaned: "/{{droplet}}"
+        trimmed: "/droplet_directory_nested/droplet_template_{{droplet}}",
+        trimmedCleaned: "/nested/{{droplet}}"
       },
       {
         cleaned: "template",
