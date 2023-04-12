@@ -9,8 +9,8 @@
     "build": "turbo run build",
     "build:watch": "turbo run build:watch",
     "chore:changeset": "changeset",
-    "chore:ddddurk": "ddddurk",
-    "chore:droplet": "droplet",
+    "chore:ddddurk": "npx @ddddurk/cli",
+    "chore:droplet": "node ./packages/droplet/dist/bin/index.js",
     "chore:lint": "yarn chore:lint:eslint && yarn chore:lint:prettier",
     "chore:lint:eslint": "eslint --fix './**/*.{js,json,jsx,ts,tsx}'",
     "chore:lint:prettier": "prettier --write .",
@@ -23,15 +23,12 @@
     "test:typecheck": "turbo run test:typecheck",
     "test:watch": "turbo run test:watch"
   },
-  "dependencies": {
-    "@dddstack/droplet": "*"
-  },
   "devDependencies": {
     "@changesets/changelog-git": "^0.1.14",
     "@changesets/cli": "^2.26.1",
     "@commitlint/cli": "^17.5.1",
     "@commitlint/config-conventional": "^17.4.4",
-    "@ddddurk/cli": "^0.1.0",
+    "@dddstack/droplet": "*",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
     "@typescript-eslint/parser": "^5.58.0",
     "eslint": "^8.38.0",
