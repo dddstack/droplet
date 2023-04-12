@@ -1,5 +1,11 @@
 # @dddstack/droplet-list-templates
 
+## 0.0.4
+
+### Patch Changes
+
+- d9476cd: Fix listTemplates paths.
+
 ## 0.0.3
 
 ### Patch Changes
