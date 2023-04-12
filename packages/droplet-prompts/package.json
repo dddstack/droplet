@@ -1,6 +1,6 @@
 {
   "name": "@dddstack/droplet-prompts",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "@dddstack/droplet-prompts for @dddstack/droplet.",
   "keywords": [],
   "homepage": "https://github.com/dddstack/droplet",
@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@dddstack/droplet-list-files": "0.0.3",
-    "@dddstack/droplet-list-templates": "0.0.3",
+    "@dddstack/droplet-list-templates": "0.0.4",
     "prompts": "^2.4.2"
   },
   "devDependencies": {

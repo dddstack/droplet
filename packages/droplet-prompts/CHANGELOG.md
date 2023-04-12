@@ -1,5 +1,12 @@
 # @dddstack/droplet-prompts
 
+## 0.0.4
+
+### Patch Changes
+
+- Updated dependencies [d9476cd]
+  - @dddstack/droplet-list-templates@0.0.4
+
 ## 0.0.3
 
 ### Patch Changes
