@@ -7,12 +7,58 @@ import { listTemplates } from "../src";
 describe("listTemplates", () =>
   it(`should list all templates prefixed with ${DROPLET_TEMPLATE_PREFIX} in a path`, () =>
     expect(listTemplates(TESTS_DROPLET_DIRECTORY_PATH)).toEqual([
-      join(TESTS_DROPLET_DIRECTORY_PATH, "droplet_directory_nested/droplet_directory_nested/droplet_template_template"),
-      join(TESTS_DROPLET_DIRECTORY_PATH, "droplet_directory_nested/droplet_directory_nested/droplet_template_{{droplet}}"),
-      join(TESTS_DROPLET_DIRECTORY_PATH, "droplet_directory_nested/droplet_template_template"),
-      join(TESTS_DROPLET_DIRECTORY_PATH, "droplet_directory_nested/droplet_template_{{droplet}}"),
-      join(TESTS_DROPLET_DIRECTORY_PATH, "droplet_template_template"),
-      join(TESTS_DROPLET_DIRECTORY_PATH, "droplet_template_{{droplet}}")
-    ])
-  )
-);
+      {
+        cleaned: "template",
+        original: join(
+          TESTS_DROPLET_DIRECTORY_PATH,
+          "droplet_directory_nested/droplet_directory_nested/droplet_template_template"
+        ),
+        trimmed: "/droplet_template_template",
+        trimmedCleaned: "/template"
+      },
+      {
+        cleaned: "{{droplet}}",
+        original: join(
+          TESTS_DROPLET_DIRECTORY_PATH,
+          "droplet_directory_nested/droplet_directory_nested/droplet_template_{{droplet}}"
+        ),
+        trimmed: "/droplet_template_{{droplet}}",
+        trimmedCleaned: "/{{droplet}}"
+      },
+      {
+        cleaned: "template",
+        original: join(
+          TESTS_DROPLET_DIRECTORY_PATH,
+          "droplet_directory_nested/droplet_template_template"
+        ),
+        trimmed: "/droplet_template_template",
+        trimmedCleaned: "/template"
+      },
+      {
+        cleaned: "{{droplet}}",
+        original: join(
+          TESTS_DROPLET_DIRECTORY_PATH,
+          "droplet_directory_nested/droplet_template_{{droplet}}"
+        ),
+        trimmed: "/droplet_template_{{droplet}}",
+        trimmedCleaned: "/{{droplet}}"
+      },
+      {
+        cleaned: "template",
+        original: join(
+          TESTS_DROPLET_DIRECTORY_PATH,
+          "droplet_template_template"
+        ),
+        trimmed: "/droplet_template_template",
+        trimmedCleaned: "/template"
+      },
+      {
+        cleaned: "{{droplet}}",
+        original: join(
+          TESTS_DROPLET_DIRECTORY_PATH,
+          "droplet_template_{{droplet}}"
+        ),
+        trimmed: "/droplet_template_{{droplet}}",
+        trimmedCleaned: "/{{droplet}}"
+      }
+    ])));

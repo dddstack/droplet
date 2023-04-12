@@ -1,10 +1,13 @@
 import { gradient } from "@dddstack/droplet-gradient";
 import type { Options } from "@dddstack/droplet-options";
 import { Command } from "commander";
-import { files, init, template } from "./commands";
 import { cwd } from "process";
 
-export const commander = (options: Options = { fromDirectory: cwd(), toDirectory: cwd() }) => {
+import { files, init, template } from "./commands";
+
+export const commander = (
+  options: Options = { fromDirectory: cwd(), toDirectory: cwd() }
+) => {
   const program = new Command("Droplet");
 
   program.description("Droplet");
@@ -12,7 +15,7 @@ export const commander = (options: Options = { fromDirectory: cwd(), toDirectory
   program
     .command("files")
     .description("Droplet files.")
-    .action(() => files(options))
+    .action(() => files(options));
 
   program
     .command("init")

@@ -5,12 +5,8 @@
     "module": "ES2022",
     "moduleResolution": "node",
     "paths": {
-      "@tests": [
-        "./tests/src"
-      ]
+      "@tests": ["./tests/src"]
     }
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

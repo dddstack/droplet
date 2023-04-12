@@ -7,9 +7,12 @@ describe("trim", () =>
   it("should trim a path", () =>
     expect(
       trim(
-        join(TESTS_DROPLET_DIRECTORY_PATH, "droplet_directory_nested/droplet_directory_nested/droplet_template_template"),
+        join(
+          TESTS_DROPLET_DIRECTORY_PATH,
+          "droplet_directory_nested/droplet_directory_nested/droplet_template_template"
+        ),
         TESTS_DROPLET_DIRECTORY_PATH
       )
-    ).toBe("/droplet_directory_nested/droplet_directory_nested/droplet_template_template")
-  )
-);
+    ).toBe(
+      "/droplet_directory_nested/droplet_directory_nested/droplet_template_template"
+    )));

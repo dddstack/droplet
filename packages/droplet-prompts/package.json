@@ -1,10 +1,20 @@
 {
   "name": "@dddstack/droplet-prompts",
   "version": "0.0.1",
-  "type": "module",
-  "publishConfig": {
-    "access": "public"
+  "description": "@dddstack/droplet-prompts for @dddstack/droplet.",
+  "keywords": [],
+  "homepage": "https://github.com/dddstack/droplet",
+  "bugs": {
+    "url": "https://github.com/dddstack/droplet"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dddstack/droplet",
+    "directory": "packages/droplet-prompts"
+  },
+  "license": "MIT",
+  "author": "ddddurk <ddddurk@proton.me>",
+  "type": "module",
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
@@ -24,5 +34,8 @@
     "@types/prompts": "^2.4.4",
     "tsup": "^6.7.0",
     "typescript": "^5.0.4"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
