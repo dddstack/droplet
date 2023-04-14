@@ -2,7 +2,7 @@ import { DROPLET_TEMPLATE_PREFIX } from "@dddstack/droplet-constants";
 import { TESTS_DROPLET_DIRECTORY_PATH } from "@tests";
 import { join } from "path";
 
-import { listTemplates } from "../src";
+import { listTemplates } from "../dist";
 
 describe("listTemplates", () =>
   it(`should list all templates prefixed with ${DROPLET_TEMPLATE_PREFIX} in a path`, () =>

@@ -1,7 +1,7 @@
 import { TESTS_DROPLET_DIRECTORY_PATH } from "@tests";
 import { join } from "path";
 
-import { trim } from "../src";
+import { trim } from "../dist";
 
 describe("trim", () =>
   it("should trim a path", () =>

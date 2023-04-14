@@ -1,4 +1,4 @@
-import { compile } from "../src";
+import { compile } from "../dist";
 
 describe("compile", () => {
   it("should compile handlebars content", () =>

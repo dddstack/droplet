@@ -1,6 +1,6 @@
 import { DROPLET_TEMPLATE_PREFIX } from "@dddstack/droplet-constants";
 
-import { clean } from "../src";
+import { clean } from "../dist";
 
 describe("clean", () =>
   it("should clean a path", () =>

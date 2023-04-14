@@ -2,7 +2,7 @@ import { DROPLET_FILE_PREFIX } from "@dddstack/droplet-constants";
 import { TESTS_DROPLET_DIRECTORY_PATH } from "@tests";
 import { join } from "path";
 
-import { listFiles } from "../src";
+import { listFiles } from "../dist";
 
 describe("listFiles", () =>
   it(`should list all files prefixed with ${DROPLET_FILE_PREFIX} in a path`, () => {
