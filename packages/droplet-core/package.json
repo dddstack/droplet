@@ -1,0 +1,47 @@
+{
+  "name": "@dddstack/droplet-core",
+  "version": "0.0.0",
+  "description": "@dddstack/droplet-core for @dddstack/droplet.",
+  "keywords": [],
+  "homepage": "https://github.com/dddstack/droplet",
+  "bugs": {
+    "url": "https://github.com/dddstack/droplet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dddstack/droplet",
+    "directory": "packages/droplet-core"
+  },
+  "license": "MIT",
+  "author": "ddddurk <ddddurk@proton.me>",
+  "type": "module",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "./dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "build:watch": "tsup --watch",
+    "test": "vitest run",
+    "test:typecheck": "tsc --noEmit",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@ddddurk/cli-kit": "^1.0.1",
+    "@ddddurk/colors": "^1.0.1",
+    "chalk": "^5.2.0",
+    "commander": "^10.0.0",
+    "handlebars": "^4.7.7",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "@types/prompts": "^2.4.4",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

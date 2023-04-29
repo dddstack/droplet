@@ -1,9 +1,0 @@
-{
-  "name": "@dddstack/tests",
-  "version": "0.0.0",
-  "private": true,
-  "devDependencies": {
-    "@types/node": "^18.15.11",
-    "typescript": "^5.0.4"
-  }
-}

@@ -1,12 +1,13 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig.json",
   "compilerOptions": {
-    "esModuleInterop": true,
-    "module": "ES2022",
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
     "moduleResolution": "node",
-    "paths": {
-      "@tests": ["./tests/src"]
-    }
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true
   },
   "exclude": ["node_modules"]
 }

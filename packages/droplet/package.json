@@ -19,10 +19,8 @@
   "license": "MIT",
   "author": "ddddurk <ddddurk@proton.me>",
   "type": "module",
-  "exports": "./dist/package/index.js",
-  "types": "./dist/package/index.d.ts",
   "bin": {
-    "droplet": "./dist/bin/index.js"
+    "droplet": "./dist/index.js"
   },
   "files": [
     "./dist"
@@ -33,7 +31,7 @@
     "test:typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@dddstack/droplet-commander": "0.0.5"
+    "@dddstack/droplet-core": "0.0.0"
   },
   "devDependencies": {
     "tsup": "^6.7.0",
