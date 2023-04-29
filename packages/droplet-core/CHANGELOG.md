@@ -1,5 +1,11 @@
 # @dddstack/droplet-core
 
+## 1.0.1
+
+### Patch Changes
+
+- d8c5270: Fix dependencies
+
 ## 1.0.0
 
 ### Major Changes
