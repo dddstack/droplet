@@ -58,14 +58,11 @@ importers:
       typescript:
         specifier: ^5.0.4
         version: 5.0.4
-      vitest:
-        specifier: ^0.30.1
-        version: 0.30.1
 
   packages/droplet:
     dependencies:
       '@dddstack/droplet-core':
-        specifier: 0.0.0
+        specifier: 1.0.0
         version: link:../droplet-core
     devDependencies:
       tsup:
@@ -108,6 +105,9 @@ importers:
       typescript:
         specifier: ^5.0.4
         version: 5.0.4
+      vitest:
+        specifier: ^0.30.1
+        version: 0.30.1
 
 packages:
 
@@ -4304,8 +4304,8 @@ packages:
       globrex: 0.1.2
     dev: true
 
-  /tinybench@2.4.0:
-    resolution: {integrity: sha512-iyziEiyFxX4kyxSp+MtY1oCH/lvjH3PxFN8PGCDeqcZWAJ/i+9y+nL85w99PxVzrIvew/GSkSbDYtiGVa85Afg==}
+  /tinybench@2.5.0:
+    resolution: {integrity: sha512-kRwSG8Zx4tjF9ZiyH4bhaebu+EDz1BOx9hOigYHlUW4xxI/wKIUQUqo018UlU4ar6ATPBsaMrdbKZ+tmPdohFA==}
     dev: true
 
   /tinycolor2@1.6.0:
@@ -4675,7 +4675,7 @@ packages:
       source-map: 0.6.1
       std-env: 3.3.2
       strip-literal: 1.0.1
-      tinybench: 2.4.0
+      tinybench: 2.5.0
       tinypool: 0.4.0
       vite: 4.3.3(@types/node@18.15.11)
       vite-node: 0.30.1(@types/node@18.15.11)
