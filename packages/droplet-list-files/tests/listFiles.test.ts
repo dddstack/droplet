@@ -6,7 +6,6 @@ import { listFiles } from "../dist";
 
 describe("listFiles", () =>
   it(`should list all files prefixed with ${DROPLET_FILE_PREFIX} in a path`, () => {
-    console.log(listFiles(TESTS_DROPLET_DIRECTORY_PATH));
     expect(listFiles(TESTS_DROPLET_DIRECTORY_PATH)).toEqual([
       {
         cleaned: "example.ts",
@@ -26,7 +25,8 @@ describe("listFiles", () =>
         ),
         trimmed:
           "/droplet_directory_nested/droplet_directory_nested/droplet_template_template/droplet_file_exampleWithDroplet.ts.hbs",
-        trimmedCleaned: "/nested/nested/template/exampleWithDroplet.ts"
+        trimmedCleaned:
+          "/nested/nested/template/exampleWithDroplet.ts"
       },
       {
         cleaned: "{{droplet}}.ts",
@@ -46,7 +46,8 @@ describe("listFiles", () =>
         ),
         trimmed:
           "/droplet_directory_nested/droplet_directory_nested/droplet_template_template/droplet_file_{{droplet}}WithDroplet.ts.hbs",
-        trimmedCleaned: "/nested/nested/template/{{droplet}}WithDroplet.ts"
+        trimmedCleaned:
+          "/nested/nested/template/{{droplet}}WithDroplet.ts"
       },
       {
         cleaned: "example.ts",
@@ -66,7 +67,8 @@ describe("listFiles", () =>
         ),
         trimmed:
           "/droplet_directory_nested/droplet_directory_nested/droplet_template_{{droplet}}/droplet_file_exampleWithDroplet.ts.hbs",
-        trimmedCleaned: "/nested/nested/{{droplet}}/exampleWithDroplet.ts"
+        trimmedCleaned:
+          "/nested/nested/{{droplet}}/exampleWithDroplet.ts"
       },
       {
         cleaned: "{{droplet}}.ts",
@@ -76,7 +78,8 @@ describe("listFiles", () =>
         ),
         trimmed:
           "/droplet_directory_nested/droplet_directory_nested/droplet_template_{{droplet}}/droplet_file_{{droplet}}.ts.hbs",
-        trimmedCleaned: "/nested/nested/{{droplet}}/{{droplet}}.ts"
+        trimmedCleaned:
+          "/nested/nested/{{droplet}}/{{droplet}}.ts"
       },
       {
         cleaned: "{{droplet}}WithDroplet.ts",
@@ -86,7 +89,8 @@ describe("listFiles", () =>
         ),
         trimmed:
           "/droplet_directory_nested/droplet_directory_nested/droplet_template_{{droplet}}/droplet_file_{{droplet}}WithDroplet.ts.hbs",
-        trimmedCleaned: "/nested/nested/{{droplet}}/{{droplet}}WithDroplet.ts"
+        trimmedCleaned:
+          "/nested/nested/{{droplet}}/{{droplet}}WithDroplet.ts"
       },
       {
         cleaned: "example.ts",
@@ -126,7 +130,8 @@ describe("listFiles", () =>
         ),
         trimmed:
           "/droplet_directory_nested/droplet_template_template/droplet_file_{{droplet}}WithDroplet.ts.hbs",
-        trimmedCleaned: "/nested/template/{{droplet}}WithDroplet.ts"
+        trimmedCleaned:
+          "/nested/template/{{droplet}}WithDroplet.ts"
       },
       {
         cleaned: "example.ts",
@@ -146,7 +151,8 @@ describe("listFiles", () =>
         ),
         trimmed:
           "/droplet_directory_nested/droplet_template_{{droplet}}/droplet_file_exampleWithDroplet.ts.hbs",
-        trimmedCleaned: "/nested/{{droplet}}/exampleWithDroplet.ts"
+        trimmedCleaned:
+          "/nested/{{droplet}}/exampleWithDroplet.ts"
       },
       {
         cleaned: "{{droplet}}.ts",
@@ -166,7 +172,8 @@ describe("listFiles", () =>
         ),
         trimmed:
           "/droplet_directory_nested/droplet_template_{{droplet}}/droplet_file_{{droplet}}WithDroplet.ts.hbs",
-        trimmedCleaned: "/nested/{{droplet}}/{{droplet}}WithDroplet.ts"
+        trimmedCleaned:
+          "/nested/{{droplet}}/{{droplet}}WithDroplet.ts"
       },
       {
         cleaned: "example.ts",
@@ -210,7 +217,8 @@ describe("listFiles", () =>
           TESTS_DROPLET_DIRECTORY_PATH,
           "/droplet_template_template/droplet_file_example.ts.hbs"
         ),
-        trimmed: "/droplet_template_template/droplet_file_example.ts.hbs",
+        trimmed:
+          "/droplet_template_template/droplet_file_example.ts.hbs",
         trimmedCleaned: "/template/example.ts"
       },
       {
@@ -229,7 +237,8 @@ describe("listFiles", () =>
           TESTS_DROPLET_DIRECTORY_PATH,
           "/droplet_template_template/droplet_file_{{droplet}}.ts.hbs"
         ),
-        trimmed: "/droplet_template_template/droplet_file_{{droplet}}.ts.hbs",
+        trimmed:
+          "/droplet_template_template/droplet_file_{{droplet}}.ts.hbs",
         trimmedCleaned: "/template/{{droplet}}.ts"
       },
       {
@@ -248,7 +257,8 @@ describe("listFiles", () =>
           TESTS_DROPLET_DIRECTORY_PATH,
           "/droplet_template_{{droplet}}/droplet_file_example.ts.hbs"
         ),
-        trimmed: "/droplet_template_{{droplet}}/droplet_file_example.ts.hbs",
+        trimmed:
+          "/droplet_template_{{droplet}}/droplet_file_example.ts.hbs",
         trimmedCleaned: "/{{droplet}}/example.ts"
       },
       {

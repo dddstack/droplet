@@ -1,7 +1,12 @@
 import { compile } from "@dddstack/droplet-compile";
 import type { listFiles } from "@dddstack/droplet-list-files";
 import { log } from "@dddstack/droplet-log";
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
+import {
+  existsSync,
+  mkdirSync,
+  readFileSync,
+  writeFileSync
+} from "fs";
 import { basename, dirname, join } from "path";
 
 export const drop = (

@@ -26,11 +26,16 @@ export const listTemplates = (
             cleaned: clean(pathPath),
             original: joinedPathPathPath,
             trimmed: trim(joinedPathPathPath, rootPath ?? path),
-            trimmedCleaned: clean(trim(joinedPathPathPath, rootPath ?? path))
+            trimmedCleaned: clean(
+              trim(joinedPathPathPath, rootPath ?? path)
+            )
           };
 
         if (pathPath.startsWith(DROPLET_DIRECTORY_NAME))
-          return listTemplates(joinedPathPathPath, rootPath ?? path);
+          return listTemplates(
+            joinedPathPathPath,
+            rootPath ?? path
+          );
       }
       return [];
     })

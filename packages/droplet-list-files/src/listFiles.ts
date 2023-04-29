@@ -26,12 +26,17 @@ export const listFiles = (
       )
         return listFiles(joinedPathPathPath, rootPath ?? path);
 
-      if (pathPath.startsWith(DROPLET_FILE_PREFIX) && pathPath.endsWith(".hbs"))
+      if (
+        pathPath.startsWith(DROPLET_FILE_PREFIX) &&
+        pathPath.endsWith(".hbs")
+      )
         return {
           cleaned: clean(pathPath),
           original: joinedPathPathPath,
           trimmed: trim(joinedPathPathPath, rootPath ?? path),
-          trimmedCleaned: clean(trim(joinedPathPathPath, rootPath ?? path))
+          trimmedCleaned: clean(
+            trim(joinedPathPathPath, rootPath ?? path)
+          )
         };
 
       return [];

@@ -5,7 +5,9 @@ import { logError } from "./logError";
 import { logFile } from "./logFile";
 import { logStatus } from "./logStatus";
 
-export const log = <LogTypeType extends LogType>(log: Log<LogTypeType>) => {
+export const log = <LogTypeType extends LogType>(
+  log: Log<LogTypeType>
+) => {
   switch (log.type) {
     case "error":
       return logError(log);

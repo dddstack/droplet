@@ -33,7 +33,8 @@ describe("listTemplates", () =>
           TESTS_DROPLET_DIRECTORY_PATH,
           "droplet_directory_nested/droplet_template_template"
         ),
-        trimmed: "/droplet_directory_nested/droplet_template_template",
+        trimmed:
+          "/droplet_directory_nested/droplet_template_template",
         trimmedCleaned: "/nested/template"
       },
       {
@@ -42,7 +43,8 @@ describe("listTemplates", () =>
           TESTS_DROPLET_DIRECTORY_PATH,
           "droplet_directory_nested/droplet_template_{{droplet}}"
         ),
-        trimmed: "/droplet_directory_nested/droplet_template_{{droplet}}",
+        trimmed:
+          "/droplet_directory_nested/droplet_template_{{droplet}}",
         trimmedCleaned: "/nested/{{droplet}}"
       },
       {

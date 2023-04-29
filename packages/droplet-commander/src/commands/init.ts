@@ -14,7 +14,10 @@ const PUBLIC_INIT_DIRECTORY_PATH = join(
 );
 
 export const init = (options: Options) => {
-  const dropletDirectory = join(options.fromDirectory, DROPLET_DIRECTORY_NAME);
+  const dropletDirectory = join(
+    options.fromDirectory,
+    DROPLET_DIRECTORY_NAME
+  );
 
   log({
     command: "INIT",

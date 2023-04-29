@@ -8,7 +8,10 @@ import {
 } from "fs";
 import { join } from "path";
 
-export const copy = (copyDirectory: string, toDirectory: string) =>
+export const copy = (
+  copyDirectory: string,
+  toDirectory: string
+) =>
   readdirSync(copyDirectory).map((dirFile) => {
     const copyDirectoryDirFile = join(copyDirectory, dirFile);
     const toDirectoryDirFile = join(toDirectory, dirFile);
@@ -16,7 +19,8 @@ export const copy = (copyDirectory: string, toDirectory: string) =>
     if (lstatSync(copyDirectoryDirFile).isDirectory())
       return copy(copyDirectoryDirFile, toDirectoryDirFile);
 
-    if (!existsSync(toDirectory)) mkdirSync(toDirectory, { recursive: true });
+    if (!existsSync(toDirectory))
+      mkdirSync(toDirectory, { recursive: true });
 
     copyFileSync(copyDirectoryDirFile, toDirectoryDirFile);
 
