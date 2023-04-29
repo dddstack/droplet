@@ -31,7 +31,7 @@
     "test:typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@dddstack/droplet-core": "0.0.0"
+    "@dddstack/droplet-core": "workspace:*"
   },
   "devDependencies": {
     "tsup": "^6.7.0",
