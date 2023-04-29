@@ -99,5 +99,8 @@ jobs:
       - run: pnpm i --frozen-lockfile=false
         shell: bash
 
+      - run: pnpm build
+        shell: bash
+
       - run: pnpm test:typecheck
         shell: bash
