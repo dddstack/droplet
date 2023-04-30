@@ -1,4 +1,4 @@
-export * from "./files";
-export * from "./help";
+export * from "./commands";
+export * from "./file";
 export * from "./init";
 export * from "./template";

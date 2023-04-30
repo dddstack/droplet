@@ -1,10 +1,11 @@
-import { version } from "../package.json";
-import { log } from "./lib";
+import chalk from "chalk";
 
-export const boxVersion = () => {
-  console.log("\n");
-  log.droplet(
-    `${log.pink(`v${version}`)} @ddddstack/droplet initiated.`
+import { version } from "../package.json";
+import { colors } from "./lib";
+import { logDroplet } from "./lib/log/logDroplet";
+
+export const boxVersion = () =>
+  logDroplet(
+    chalk.hex(colors.pink)("v" + version) +
+      " @ddddstack/droplet initiated."
   );
-  console.log("\n");
-};

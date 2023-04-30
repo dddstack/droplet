@@ -1,11 +1,15 @@
-import chalk from "chalk";
 import { existsSync, mkdirSync } from "fs";
 import { dirname, join } from "path";
-import { exit } from "process";
 import { fileURLToPath } from "url";
 
-import { copy, DROPLET_DIRECTORY_NAME, log } from "../lib";
-import type { Options } from "../types";
+import type { DropletOptions } from "../droplet";
+import {
+  copy,
+  DROPLET_DIRECTORY_NAME,
+  dropletExists,
+  log,
+  logSuccess
+} from "../lib";
 
 const PUBLIC_INIT_DIRECTORY_PATH = join(
   dirname(fileURLToPath(import.meta.url)),
@@ -13,8 +17,10 @@ const PUBLIC_INIT_DIRECTORY_PATH = join(
   "init"
 );
 
-export const init = (options: Options) => {
-  log.droplet("Searching for Droplet...");
+export const init = (options: DropletOptions) => {
+  console.log("\n");
+
+  log("Searching for Droplet...");
 
   console.log("\n");
 
@@ -23,34 +29,18 @@ export const init = (options: Options) => {
     DROPLET_DIRECTORY_NAME
   );
 
-  if (existsSync(dropletDirectory)) {
-    log.box(
-      "red",
-      "Error",
-      `Droplet already exists at ${dropletDirectory}`
-    );
-
-    log.indent("To use Droplet, run one of the following:");
-    log.indent(chalk.bold("droplet files"));
-    log.indent(chalk.bold("droplet template"));
-
-    console.log("\n");
-    exit(0);
-  }
+  if (existsSync(dropletDirectory))
+    dropletExists(dropletDirectory);
 
   mkdirSync(dropletDirectory);
 
-  log.droplet("Initializing Droplet with example droplets...");
+  log("Initializing Droplet with example droplets...");
 
   copy(PUBLIC_INIT_DIRECTORY_PATH, dropletDirectory);
 
   console.log("\n");
 
-  log.box(
-    "green",
-    "Success",
-    `Droplet initialized at ${dropletDirectory}`
-  );
+  logSuccess("Droplet initialized at " + dropletDirectory);
 
   console.log("\n");
 };

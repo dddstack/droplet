@@ -1,12 +1,11 @@
 import { lstatSync, readdirSync } from "fs";
 import { join } from "path";
 
-import { clean } from "./clean";
 import {
   DROPLET_DIRECTORY_NAME,
   DROPLET_FILE_PREFIX
-} from "./constants";
-import { trim } from "./trim";
+} from "../constants";
+import { clean, trim } from "../text";
 
 export const listFiles = (
   path: string,

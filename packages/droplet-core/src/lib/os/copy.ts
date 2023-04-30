@@ -7,7 +7,7 @@ import {
 } from "fs";
 import { join } from "path";
 
-import { log } from "./log";
+import { log } from "../log";
 
 export const copy = (
   copyDirectory: string,
@@ -27,5 +27,5 @@ export const copy = (
 
     copyFileSync(copyDirectoryDirFile, toDirectoryDirFile);
 
-    log.indent(toDirectoryDirFile);
+    log(toDirectoryDirFile);
   });
