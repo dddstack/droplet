@@ -1,5 +1,11 @@
 # @dddstack/droplet-core
 
+## 2.0.1
+
+### Patch Changes
+
+- 99f1ad7: "\n"
+
 ## 2.0.0
 
 ### Major Changes
