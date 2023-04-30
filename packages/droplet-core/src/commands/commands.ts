@@ -7,9 +7,9 @@ export const commands = () => {
 
   logDroplet("Commands:");
 
-  log(`${chalk.bold("file")}: Droplet file.`);
-  log(`${chalk.bold("init")}: Initialize Droplet.`);
-  log(`${chalk.bold("template")}: Droplet template.`);
+  log(chalk.bold("file") + ": Droplet file.");
+  log(chalk.bold("init") + ": Initialize Droplet.");
+  log(chalk.bold("template") + ": Droplet template.");
 
   console.log("\n");
 };
