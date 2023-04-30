@@ -6,9 +6,9 @@ import {
 } from "fs";
 import { basename, dirname, join } from "path";
 
-import { compile } from "./compile";
+import { log } from "../log";
+import { compile } from "../text";
 import type { listFiles } from "./listFiles";
-import { log } from "./log";
 
 export const drop = (
   droplet: string,
@@ -18,13 +18,13 @@ export const drop = (
 ) =>
   fileChoices.map((fileChoice) => {
     const toDirectoryFile = compile(
+      droplet,
       join(
         toDirectory,
         (type === "file"
           ? basename(fileChoice.trimmedCleaned as string)
           : fileChoice.trimmedCleaned) as string
-      ),
-      droplet
+      )
     );
     const toDirectoryDirectory = dirname(toDirectoryFile);
 
@@ -33,8 +33,8 @@ export const drop = (
 
     writeFileSync(
       toDirectoryFile,
-      compile(readFileSync(fileChoice.original, "utf8"), droplet)
+      compile(droplet, readFileSync(fileChoice.original, "utf8"))
     );
 
-    log.indent(toDirectoryFile);
+    log(toDirectoryFile);
   });

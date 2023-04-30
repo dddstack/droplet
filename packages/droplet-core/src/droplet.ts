@@ -2,27 +2,34 @@ import { Command } from "commander";
 import { cwd } from "process";
 
 import { boxVersion } from "./boxVersion";
-import { files, help, init, template } from "./commands";
-import type { Options } from "./types";
+import { commands, file, init, template } from "./commands";
 
-export const dropletCommander = (
-  options: Options = { fromDirectory: cwd(), toDirectory: cwd() }
+export type DropletOptions = {
+  fromDirectory: string;
+  toDirectory: string;
+};
+
+export const droplet = (
+  options: DropletOptions = {
+    fromDirectory: cwd(),
+    toDirectory: cwd()
+  }
 ) => {
   const program = new Command("Droplet");
 
   program.helpOption(false);
 
   program
-    .command("help", { isDefault: true })
+    .command("--dropletcommands", { isDefault: true })
     .helpOption(false)
     .hook("preAction", () => boxVersion())
-    .action(() => help());
+    .action(() => commands());
 
   program
-    .command("files")
+    .command("file")
     .helpOption(false)
     .hook("preAction", () => boxVersion())
-    .action(() => files(options));
+    .action(async () => await file(options));
 
   program
     .command("init")
@@ -34,7 +41,7 @@ export const dropletCommander = (
     .command("template")
     .helpOption(false)
     .hook("preAction", () => boxVersion())
-    .action(() => template(options));
+    .action(async () => await template(options));
 
   return program;
 };

@@ -1,63 +1,56 @@
 import { existsSync } from "fs";
 import { join } from "path";
-import { exit } from "process";
-import prompts from "prompts";
 
+import type { DropletOptions } from "../droplet";
+import { DROPLET_DIRECTORY_NAME } from "../lib";
 import {
   drop,
-  DROPLET_DIRECTORY_NAME,
+  dropletNotFound,
   listFiles,
   listTemplates,
   log,
-  promptDroplet,
-  promptTemplates,
-  promptTo
+  logSuccess,
+  noFound,
+  promptLocation,
+  promptTemplate,
+  promptValue
 } from "../lib";
-import type { Options } from "../types";
-import { dropletNotFound } from "./logs";
 
-export const template = (options: Options) => {
-  log.droplet("Searching for Droplet templates...");
-
-  console.log("\n");
-
+export const template = async (options: DropletOptions) => {
   const DROPLET_DIRECTORY_PATH = join(
     options.fromDirectory,
     DROPLET_DIRECTORY_NAME
   );
 
-  if (!existsSync(DROPLET_DIRECTORY_PATH)) {
-    dropletNotFound();
-    exit(1);
-  }
+  if (!existsSync(DROPLET_DIRECTORY_PATH)) dropletNotFound();
 
-  prompts([
-    promptTemplates(listTemplates(DROPLET_DIRECTORY_PATH)),
-    promptTo,
-    promptDroplet
-  ]).then((answers) => {
-    const { template, to, droplet } = answers;
+  const templates = listTemplates(DROPLET_DIRECTORY_PATH);
 
-    if (template && to && droplet) {
-      console.log("\n");
+  if (templates.length === 0) noFound("templates");
 
-      log.box("yellow", "Template", "Dropletting template...");
+  const location = await promptLocation();
 
-      drop(
-        droplet,
-        listFiles(
-          template.original,
-          join(DROPLET_DIRECTORY_PATH, template.trimmed)
-        ),
-        to,
-        "template"
-      );
+  const template = await promptTemplate(templates);
 
-      console.log("\n");
+  const value = await promptValue();
 
-      log.box("green", "Success", "Droplet complete!");
+  console.log("\n");
 
-      console.log("\n");
-    }
-  });
+  log("Droplet in progress...");
+
+  drop(
+    value,
+    listFiles(
+      template.original,
+      join(DROPLET_DIRECTORY_PATH, template.trimmed)
+    ),
+    location,
+    "template"
+  );
+
+  console.log("\n");
+
+  logSuccess("Droplet complete!");
+
+  console.log("\n");
 };

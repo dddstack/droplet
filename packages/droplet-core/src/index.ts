@@ -1,1 +1,1 @@
-export * from "./dropletCommander";
+export * from "./droplet";
