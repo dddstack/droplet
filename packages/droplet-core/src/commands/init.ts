@@ -18,8 +18,6 @@ const PUBLIC_INIT_DIRECTORY_PATH = join(
 );
 
 export const init = (options: DropletOptions) => {
-  console.log("\n");
-
   log("Searching for Droplet...");
 
   console.log("\n");
