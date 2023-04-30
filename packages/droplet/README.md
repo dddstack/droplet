@@ -23,9 +23,8 @@
 
 <div align="center">
   <img alt="Version" src="https://img.shields.io/npm/v/@dddstack/droplet?color=aqua&style=for-the-badge">
-  <img alt="License" src="https://img.shields.io/github/license/dddstack/droplet?style=for-the-badge">
 </div>
 
 ## Documentation
 
-For comprehensive documentation, vist [https://dddstack.com/droplet](https://dddstack.com/droplet).
+For comprehensive documentation, vist [https://droplet.dddstack.com](https://droplet.dddstack.com).
