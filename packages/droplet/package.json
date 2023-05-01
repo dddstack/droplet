@@ -7,7 +7,7 @@
     "commander",
     "prompts"
   ],
-  "homepage": "https://droplet.dddstack.com",
+  "homepage": "https://github.com/dddstack/droplet",
   "bugs": {
     "url": "https://github.com/dddstack/droplet"
   },
