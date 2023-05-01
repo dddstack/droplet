@@ -14,7 +14,7 @@ export const promptFile = async (
       value: fileChoice
     })),
     initial: fileChoices[0],
-    label: label(colors.droplet, "template"),
+    label: label(colors.droplet, "file"),
     message: "File?",
     name: "file",
     type: "select"
