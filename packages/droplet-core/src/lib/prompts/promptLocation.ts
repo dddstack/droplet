@@ -7,7 +7,7 @@ import { colors } from "../colors";
 export const promptLocation = async () => {
   const { location } = await prompt({
     initial: "./",
-    label: label(colors.droplet, "template"),
+    label: label(colors.droplet, "to"),
     message: "Location?",
     name: "location",
     type: "text"
