@@ -1,5 +1,13 @@
 # @dddstack/droplet-core
 
+## 2.1.0
+
+### Minor Changes
+
+- 0d28846: Publish 2.1.0
+
+  - upgrade `@ddddurk/kit`
+
 ## 2.0.1
 
 ### Patch Changes
