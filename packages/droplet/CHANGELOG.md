@@ -1,5 +1,13 @@
 # @dddstack/droplet
 
+## 2.1.1
+
+### Patch Changes
+
+- e1194cd: Fix `file` prompts
+- Updated dependencies [e1194cd]
+  - @dddstack/droplet-core@2.1.1
+
 ## 2.1.0
 
 ### Minor Changes
