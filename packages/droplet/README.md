@@ -27,4 +27,4 @@
 
 ## Documentation
 
-For comprehensive documentation, vist [https://droplet.dddstack.com](https://droplet.dddstack.com).
+For comprehensive documentation, vist [Droplet's docs.](https://github.com/dddstack/droplet/blob/main/docs).
