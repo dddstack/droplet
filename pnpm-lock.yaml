@@ -16,9 +16,6 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^17.6.1
         version: 17.6.1
-      '@ddddurk/cli':
-        specifier: ^0.1.4
-        version: 0.1.4
       '@typescript-eslint/eslint-plugin':
         specifier: ^5.59.1
         version: 5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4)
@@ -506,15 +503,6 @@ packages:
       '@jridgewell/trace-mapping': 0.3.9
     dev: true
 
-  /@ddddurk/cli@0.1.4:
-    resolution: {integrity: sha512-jdQtWssO5hixKA3UQjMS0h+VIxj0FEGxdQgCHgaZr3TMaiYnvWaUZZdBUsqh75aYRnlKcAuv7zpYtinRFPER+w==}
-    hasBin: true
-    dependencies:
-      '@dddstack/droplet': 0.0.6
-      chalk: 5.2.0
-      gradient-string: 2.0.2
-    dev: true
-
   /@ddddurk/colors@1.0.1:
     resolution: {integrity: sha512-oj/5DVqfpuVKUVsQVS5rCLl+bSfLKnu5hMdAb9jZ0Di/N6S3iS3Vee3jxDxgdzmYEekBzG3Jhg+JWRTSBsac1g==}
     dev: false
@@ -524,105 +512,6 @@ packages:
     dependencies:
       chalk: 5.2.0
     dev: false
-
-  /@dddstack/droplet-clean@0.0.3:
-    resolution: {integrity: sha512-hlhsLtXdtuqsaJxPxzu0z4C5TiTb8rJFWaUWQo2rWWk4fyUIUaYCjlcPWaamArVti/FdrNFzvJKplCMzLUeWKg==}
-    dependencies:
-      '@dddstack/droplet-constants': 0.0.2
-    dev: true
-
-  /@dddstack/droplet-commander@0.0.5:
-    resolution: {integrity: sha512-PupzdKvLTfkyjw8gnV/tIDM9FHwU5EZf0Hy8aIAdb0tfza5KlqhRvLmRPt9quYPZpYWqMpKzWTLKuzQYueQ0Iw==}
-    dependencies:
-      '@dddstack/droplet-constants': 0.0.2
-      '@dddstack/droplet-copy': 0.0.2
-      '@dddstack/droplet-drop': 0.0.3
-      '@dddstack/droplet-gradient': 0.0.2
-      '@dddstack/droplet-list-files': 0.0.3
-      '@dddstack/droplet-list-templates': 0.0.4
-      '@dddstack/droplet-log': 0.0.2
-      '@dddstack/droplet-options': 0.0.2
-      '@dddstack/droplet-prompts': 0.0.4
-      chalk: 5.2.0
-      commander: 10.0.0
-      prompts: 2.4.2
-    dev: true
-
-  /@dddstack/droplet-compile@0.0.3:
-    resolution: {integrity: sha512-ikqAH1LZSeaTlhEXgUh/Vufgxt3glM5cdSsQjTCVDCg6b/1ASdPoPl34PuFnAHfuy4X37NhPrOKzjz+8qdw0pg==}
-    dependencies:
-      handlebars: 4.7.7
-    dev: true
-
-  /@dddstack/droplet-constants@0.0.2:
-    resolution: {integrity: sha512-AnkdjIPedxG0RG8pEwsALa/Oz2TUViIovf82Nk8MEzwtx0Y8YxDs/hvnhK3iD0SFPapxmM6OsWWOf+W0WbiWTg==}
-    dev: true
-
-  /@dddstack/droplet-copy@0.0.2:
-    resolution: {integrity: sha512-OFgSTukSzczGdIj//9ova0EBp8XLc9egAFseTHmoVGeE5RVlgU6JmYyvDtUW+sJWuz2J6+kwUSblYHkfZcXjzA==}
-    dependencies:
-      '@dddstack/droplet-log': 0.0.2
-    dev: true
-
-  /@dddstack/droplet-drop@0.0.3:
-    resolution: {integrity: sha512-2vvMLeDmYUDPAFMpjXTh1XY5Ygg++lPncxn/HGAycyXA0FkdtDjXRDyPtUPt3K98G/BcHC+Ziw8JWC7briH7Qw==}
-    dependencies:
-      '@dddstack/droplet-compile': 0.0.3
-      '@dddstack/droplet-list-files': 0.0.3
-      '@dddstack/droplet-log': 0.0.2
-    dev: true
-
-  /@dddstack/droplet-gradient@0.0.2:
-    resolution: {integrity: sha512-71fooRVG18K+foQhEYz30yPKtwc4CYn/aukiamdLAJeDXAYG2hQyfoJnp4FLaAl0ntXFt329hY/G6y1/MJJeEg==}
-    dependencies:
-      chalk: 4.1.2
-      gradient-string: 2.0.2
-    dev: true
-
-  /@dddstack/droplet-list-files@0.0.3:
-    resolution: {integrity: sha512-/QKDB2w/c1nxBKSH8izpBAzrCIf/cvPGesKAGttCWaJjbNbfjGecn5xNlhNvZ0ut5JVnbxSj53XfaEfx0o6tvA==}
-    dependencies:
-      '@dddstack/droplet-clean': 0.0.3
-      '@dddstack/droplet-constants': 0.0.2
-      '@dddstack/droplet-trim': 0.0.3
-    dev: true
-
-  /@dddstack/droplet-list-templates@0.0.4:
-    resolution: {integrity: sha512-fmQ25+wC8NK+eLrpR3eAMP+zeIJG+4r/psZjIVRQ2Eq+ZqUZbBsFzCiIynXv3AihfV50e6NR3U/negb4u3hWmg==}
-    dependencies:
-      '@dddstack/droplet-clean': 0.0.3
-      '@dddstack/droplet-constants': 0.0.2
-      '@dddstack/droplet-trim': 0.0.3
-    dev: true
-
-  /@dddstack/droplet-log@0.0.2:
-    resolution: {integrity: sha512-83/5ezaasKl3LVctGB5B30it6QtDeZpHIxgMfS2meZo+JIQRg8LFNJ9htla9h5+rEHtSs2iU5mL8UJ9W47sykA==}
-    dependencies:
-      chalk: 4.1.2
-    dev: true
-
-  /@dddstack/droplet-options@0.0.2:
-    resolution: {integrity: sha512-d5pIUqqPT1coQEUvef9g3UJwBo3Luco/x8nUozn8Zk2EtXzIlH7fnhBjcNiQxmL56ykD4eBp3MOX6ilUMezdfg==}
-    dev: true
-
-  /@dddstack/droplet-prompts@0.0.4:
-    resolution: {integrity: sha512-qTqqRq0/GRYQHAnRVwYxGjkbzdQkT+FgZJnX3oJzJ1TPzUTMLFVAxcHKvHWeiHBQ/Kp6NMBdJresF4eM3qe15A==}
-    dependencies:
-      '@dddstack/droplet-list-files': 0.0.3
-      '@dddstack/droplet-list-templates': 0.0.4
-      prompts: 2.4.2
-    dev: true
-
-  /@dddstack/droplet-trim@0.0.3:
-    resolution: {integrity: sha512-WMWRK7SVQT3bKeoFcPqHi12775xILJVAIB0nUWclB1iBMD4LKIor36qiL0/a7fRrmfFVCmpPvx1ZqfAMUd9LMQ==}
-    dev: true
-
-  /@dddstack/droplet@0.0.6:
-    resolution: {integrity: sha512-f2GYye1da8NEbSnp57sKt7HNOnEhNgaZCF/gSvvwqFpxTZDGMlLYTxvY7ppzHcV0L57pYieMecr/SzxTY304gw==}
-    hasBin: true
-    dependencies:
-      '@dddstack/droplet-commander': 0.0.5
-    dev: true
 
   /@esbuild/android-arm64@0.17.18:
     resolution: {integrity: sha512-/iq0aK0eeHgSC3z55ucMAHO05OIqmQehiGay8eP5l/5l+iEr4EIbh4/MI8xD9qRFjqzgkc0JkX0LculNC9mXBw==}
@@ -1043,10 +932,6 @@ packages:
 
   /@types/semver@7.3.13:
     resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==}
-    dev: true
-
-  /@types/tinycolor2@1.4.3:
-    resolution: {integrity: sha512-Kf1w9NE5HEgGxCRyIcRXR/ZYtDv0V8FVPtYHwLxl0O+maGX0erE77pQlD0gpP+/KByMZ87mOA79SjifhSB3PjQ==}
     dev: true
 
   /@typescript-eslint/eslint-plugin@5.59.1(@typescript-eslint/parser@5.59.1)(eslint@8.39.0)(typescript@5.0.4):
@@ -2558,14 +2443,6 @@ packages:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
     dev: true
 
-  /gradient-string@2.0.2:
-    resolution: {integrity: sha512-rEDCuqUQ4tbD78TpzsMtt5OIf0cBCSDWSJtUDaF6JsAh+k0v9r++NzxNEG87oDZx9ZwGhD8DaezR2L/yrw0Jdw==}
-    engines: {node: '>=10'}
-    dependencies:
-      chalk: 4.1.2
-      tinygradient: 1.1.5
-    dev: true
-
   /grapheme-splitter@1.0.4:
     resolution: {integrity: sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==}
     dev: true
@@ -2581,6 +2458,7 @@ packages:
       wordwrap: 1.0.0
     optionalDependencies:
       uglify-js: 3.17.4
+    dev: false
 
   /hard-rejection@2.1.0:
     resolution: {integrity: sha512-VIZB+ibDhx7ObhAe7OVtoEbuP4h/MuOTHJ+J8h/eBXotJYl0fBgR72xDFCKgIh22OJZIOVNxBMWuhAr10r8HdA==}
@@ -3378,6 +3256,7 @@ packages:
 
   /neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
+    dev: false
 
   /normalize-package-data@2.5.0:
     resolution: {integrity: sha512-/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==}
@@ -3719,14 +3598,6 @@ packages:
       react-is: 17.0.2
     dev: true
 
-  /prompts@2.4.2:
-    resolution: {integrity: sha512-NxNv/kLguCA7p3jE8oL2aEBsrJWgAakBpgmgK6lpPWV+WuOmY6r2/zbAVnP+T8bQlA0nzHXSJSJW0Hq7ylaD2Q==}
-    engines: {node: '>= 6'}
-    dependencies:
-      kleur: 3.0.3
-      sisteransi: 1.0.5
-    dev: true
-
   /pseudomap@1.0.2:
     resolution: {integrity: sha512-b/YwNhb8lk1Zz2+bXXpS/LK9OisiZZ1SNsSLxN1x2OXVEhW2Ckr/7mWE5vrC1ZTiJlD9g19jWszTmJsB+oEpFQ==}
     dev: true
@@ -4003,6 +3874,7 @@ packages:
 
   /sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
+    dev: false
 
   /slash@3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
@@ -4340,17 +4212,6 @@ packages:
     resolution: {integrity: sha512-kRwSG8Zx4tjF9ZiyH4bhaebu+EDz1BOx9hOigYHlUW4xxI/wKIUQUqo018UlU4ar6ATPBsaMrdbKZ+tmPdohFA==}
     dev: true
 
-  /tinycolor2@1.6.0:
-    resolution: {integrity: sha512-XPaBkWQJdsf3pLKJV9p4qN/S+fm2Oj8AIPo1BTUhg5oxkvm9+SVEGFdhyOz7tTdUTfvxMiAs4sp6/eZO2Ew+pw==}
-    dev: true
-
-  /tinygradient@1.1.5:
-    resolution: {integrity: sha512-8nIfc2vgQ4TeLnk2lFj4tRLvvJwEfQuabdsmvDdQPT0xlk9TaNtpGd6nNRxXoK6vQhN6RSzj+Cnp5tTQmpxmbw==}
-    dependencies:
-      '@types/tinycolor2': 1.4.3
-      tinycolor2: 1.6.0
-    dev: true
-
   /tinypool@0.4.0:
     resolution: {integrity: sha512-2ksntHOKf893wSAH4z/+JbPpi92esw8Gn9N2deXX+B0EO92hexAVI9GIZZPx7P5aYo5KULfeOSt3kMOmSOy6uA==}
     engines: {node: '>=14.0.0'}
@@ -4564,6 +4425,7 @@ packages:
     engines: {node: '>=0.8.0'}
     hasBin: true
     requiresBuild: true
+    dev: false
     optional: true
 
   /unbox-primitive@1.0.2:
@@ -4840,6 +4702,7 @@ packages:
 
   /wordwrap@1.0.0:
     resolution: {integrity: sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q==}
+    dev: false
 
   /wrap-ansi@6.2.0:
     resolution: {integrity: sha512-r6lPcBGxZXlIcymEu7InxDMhdW0KDxpLgoFLcguasxCaJ/SOIZwINatK9KY/tf+ZrlywOKU0UDj3ATXUBfxJXA==}
