@@ -1,5 +1,11 @@
 # @dddstack/droplet-core
 
+## 2.1.2
+
+### Patch Changes
+
+- fdfbf79: Fix location prompts
+
 ## 2.1.1
 
 ### Patch Changes
