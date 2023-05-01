@@ -8,7 +8,7 @@ export const boxVersion = () => {
   console.log("\n");
 
   logDroplet(
-    chalk.hex(colors.pink)("v" + version) +
+    chalk.hex(colors.droplet)("v" + version) +
       " @ddddstack/droplet initiated."
   );
 

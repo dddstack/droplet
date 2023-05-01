@@ -30,7 +30,7 @@
   "dependencies": {
     "@astrojs/cli-kit": "^0.2.3",
     "@ddddurk/colors": "^1.0.1",
-    "@ddddurk/kit": "^1.0.0",
+    "@ddddurk/kit": "^1.1.2",
     "chalk": "^5.2.0",
     "commander": "^10.0.0",
     "handlebars": "^4.7.7"

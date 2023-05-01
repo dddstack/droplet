@@ -7,7 +7,7 @@ import { colors } from "../colors";
 export const promptValue = async () => {
   const { value } = await prompt({
     initial: "droplet",
-    label: label(colors.pink, "value"),
+    label: label(colors.droplet, "value"),
     message: "Value?",
     name: "value",
     type: "text"

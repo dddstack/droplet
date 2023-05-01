@@ -13,8 +13,7 @@ export const promptTemplate = async (
       label: templateChoice.trimmedCleaned as string,
       value: templateChoice
     })),
-    initial: templateChoices[0],
-    label: label(colors.pink, "template"),
+    label: label(colors.droplet, "template"),
     message: "Template?",
     name: "template",
     type: "select"

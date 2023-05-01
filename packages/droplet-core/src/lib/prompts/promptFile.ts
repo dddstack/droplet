@@ -13,7 +13,8 @@ export const promptFile = async (
       label: fileChoice.trimmedCleaned as string,
       value: fileChoice
     })),
-    label: label(colors.pink, "file"),
+    initial: fileChoices[0],
+    label: label(colors.droplet, "template"),
     message: "File?",
     name: "file",
     type: "select"
