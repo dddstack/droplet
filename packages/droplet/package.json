@@ -1,6 +1,6 @@
 {
   "name": "@dddstack/droplet",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "A simple code generation tool for complex codebases.",
   "keywords": [
     "code-generation",
@@ -31,7 +31,7 @@
     "test:typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@dddstack/droplet-core": "2.0.1"
+    "@dddstack/droplet-core": "2.1.0"
   },
   "devDependencies": {
     "tsup": "^6.7.0",
