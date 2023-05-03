@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "pnpm --stream -r build",
-    "build:watch": "pnpm --stream -r build:watch",
+    "build": "turbo run build --filter=./packages/*",
+    "build:watch": "turbo run build:watch --filter=./packages/*",
     "chore:changeset": "changeset",
     "chore:lint": "pnpm chore:lint:prettier && pnpm chore:lint:eslint",
     "chore:lint:eslint": "eslint --fix './**/*.{js,json,yaml}'",
@@ -14,11 +14,12 @@
     "ci:version": "changeset version",
     "ci:version:snapshot": "changeset version --snapshot snapshot",
     "ddddurk": "npx @ddddurk/cli@latest",
+    "dev": "turbo run dev",
     "droplet": "node ./packages/droplet/dist/index.js",
     "prepare": "husky install",
-    "test": "pnpm --stream -r test",
-    "test:typecheck": "pnpm --stream -r test:typecheck",
-    "test:watch": "pnpm --stream -r test:watch"
+    "test": "turbo run test",
+    "test:typecheck": "turbo run test:typecheck",
+    "test:watch": "turbo run test:watch"
   },
   "devDependencies": {
     "@changesets/changelog-git": "^0.1.14",
@@ -28,7 +29,9 @@
     "@typescript-eslint/eslint-plugin": "^5.59.1",
     "@typescript-eslint/parser": "^5.59.1",
     "eslint": "^8.39.0",
+    "eslint-plugin-astro": "^0.26.1",
     "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-mdx": "^2.0.5",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
@@ -36,7 +39,10 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
+    "prettier-plugin-astro": "^0.8.0",
     "prettier-plugin-packagejson": "^2.4.3",
+    "prettier-plugin-tailwindcss": "^0.2.8",
+    "turbo": "^1.9.3",
     "typescript": "^5.0.4"
   }
 }
