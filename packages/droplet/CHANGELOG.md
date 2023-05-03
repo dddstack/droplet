@@ -1,5 +1,13 @@
 # @dddstack/droplet
 
+## 2.1.5
+
+### Patch Changes
+
+- 0e38355: Make file logs consistent 2
+- Updated dependencies [0e38355]
+  - @dddstack/droplet-core@2.1.4
+
 ## 2.1.4
 
 ### Patch Changes
