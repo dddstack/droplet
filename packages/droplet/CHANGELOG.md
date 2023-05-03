@@ -1,5 +1,11 @@
 # @dddstack/droplet
 
+## 2.1.3
+
+### Patch Changes
+
+- 4cbf620: Update documentation
+
 ## 2.1.2
 
 ### Patch Changes
