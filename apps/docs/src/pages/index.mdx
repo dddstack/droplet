@@ -88,9 +88,10 @@ Droplet automatically reads all Droplet files and templates in the `droplet` dir
 
 To take advantage of Handlebars, use `{{droplet}}` in Handlebars templates:
 
+{/* prettier-ignore */}
 ```md
--- droplet*template*{{droplet}}
--- droplet_file_index.ts
+-- droplet_template_{{droplet}}
+  -- droplet_file_index.ts
 ```
 
 ```ts
