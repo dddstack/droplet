@@ -12,6 +12,9 @@
     "dev": {
       "cache": false
     },
+    "test": {
+      "dependsOn": ["^build"]
+    },
     "test:typecheck": {
       "cache": false,
       "dependsOn": ["^build"]
