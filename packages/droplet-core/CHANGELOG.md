@@ -1,5 +1,11 @@
 # @dddstack/droplet-core
 
+## 2.1.3
+
+### Patch Changes
+
+- 06a1b41: Make file logs consisten
+
 ## 2.1.2
 
 ### Patch Changes
