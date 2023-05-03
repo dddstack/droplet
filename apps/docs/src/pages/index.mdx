@@ -7,7 +7,7 @@ import { Stack, Text, Title } from "@dddstack/davaiui-astro";
 import { data } from "../lib";
 
 <Stack class="items-center space-y-6 pb-12 text-center md:pb-16">
-  <Title class="text-3xl font-extrabold md:text-4xl">
+  <Title class="text-3xl font-extrabold md:text-4xl lg:text-5xl">
     {data.title}
   </Title>
   <Text class="text-xl font-light text-gray-600 md:text-2xl">
@@ -49,7 +49,7 @@ npx droplet file
 
 ## Template
 
-Drop all Droplet template to a location:
+Drop a Droplet template to a location:
 
 ```bash
 npx droplet template
@@ -59,7 +59,7 @@ npx droplet template
 
 ## Droplet Directory
 
-Droplet automatically reads all Droplet files and templates in the Droplet directory. To create files and templates, follow the Droplet naming convention:
+Droplet automatically reads all Droplet files and templates in the `droplet` directory. To create files and templates, follow the Droplet naming convention:
 
 {/* prettier-ignore */}
 - **droplet_directory_***: Directory
@@ -72,15 +72,16 @@ Droplet automatically reads all Droplet files and templates in the Droplet direc
   For example, a `droplet` directory structure could look like:
 </p>
 
+{/* prettier-ignore */}
 ```md
 -- droplet
--- droplet_directory_docs
--- droplet_file_README.md.hbs
--- droplet_file_README.md.fr.hbs
--- droplet_file_index.ts.hbs
--- droplet_template_package
--- droplet_file_index.ts.hbs
--- droplet_file_package.json.hbs
+  -- droplet_directory_docs
+    -- droplet_file_README.md.hbs
+    -- droplet_file_README.md.fr.hbs
+  -- droplet_file_index.ts.hbs
+  -- droplet_template_package
+    -- droplet_file_index.ts.hbs
+    -- droplet_file_package.json.hbs
 ```
 
 ## Droplet Value
@@ -97,7 +98,7 @@ To take advantage of Handlebars, use `{{droplet}}` in Handlebars templates:
 export const droplet = {{droplet}};
 ```
 
-Droplet asks for an optional value before executing that is applied to all mentions of `{{droplet}}`.
+Droplet prompts for an optional value that will be supplied to all mentions of `{{droplet}}`.
 
 ## Wrapping Droplet
 
@@ -121,6 +122,8 @@ export const program = droplet({
 
 program.command("command").action(() => console.log("command"));
 ```
+
+For a comprehensive example of wrapping Droplet, see [@ddddurk/cli](https://github.com/ddddurk/cli).
 
 ## Acknowledgements
 
