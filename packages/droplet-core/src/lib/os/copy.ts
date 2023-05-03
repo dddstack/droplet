@@ -8,17 +8,23 @@ import {
 import { join } from "path";
 
 import { log } from "../log";
+import { trim } from "../text";
 
 export const copy = (
   copyDirectory: string,
-  toDirectory: string
+  toDirectory: string,
+  toDirectoryOriginal?: string
 ) =>
   readdirSync(copyDirectory).map((dirFile) => {
     const copyDirectoryDirFile = join(copyDirectory, dirFile);
     const toDirectoryDirFile = join(toDirectory, dirFile);
 
     if (lstatSync(copyDirectoryDirFile).isDirectory()) {
-      copy(copyDirectoryDirFile, toDirectoryDirFile);
+      copy(
+        copyDirectoryDirFile,
+        toDirectoryDirFile,
+        toDirectory
+      );
       return;
     }
 
@@ -27,5 +33,10 @@ export const copy = (
 
     copyFileSync(copyDirectoryDirFile, toDirectoryDirFile);
 
-    log(toDirectoryDirFile);
+    log(
+      trim(
+        toDirectoryDirFile,
+        toDirectoryOriginal ?? toDirectory
+      )
+    );
   });

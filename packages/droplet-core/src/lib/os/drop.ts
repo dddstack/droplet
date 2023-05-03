@@ -36,5 +36,5 @@ export const drop = (
       compile(droplet, readFileSync(fileChoice.original, "utf8"))
     );
 
-    log(fileChoice.original);
+    log(toDirectoryFile);
   });
