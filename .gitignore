@@ -1,3 +1,4 @@
 .DS_Store
+.turbo/
 dist
 node_modules/
