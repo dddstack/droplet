@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-- 06a1b41: Make file logs consisten
+- 06a1b41: Make file logs consistent
 - Updated dependencies [06a1b41]
   - @dddstack/droplet-core@2.1.3
 
