@@ -1,5 +1,11 @@
 # @dddstack/droplet-core
 
+## 2.1.5
+
+### Patch Changes
+
+- 48f3fe0: Update README.md
+
 ## 2.1.4
 
 ### Patch Changes
