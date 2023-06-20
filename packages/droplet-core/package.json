@@ -25,14 +25,17 @@
     "build:watch": "tsup --watch",
     "test": "vitest run",
     "test:typecheck": "tsc --noEmit",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "tsc": "tsc",
+    "tsup": "tsup",
+    "vitest": "vitest"
   },
   "dependencies": {
     "@astrojs/cli-kit": "^0.2.3",
     "@ddddurk/colors": "^1.0.1",
     "@ddddurk/kit": "^1.1.2",
     "chalk": "^5.2.0",
-    "commander": "^10.0.0",
+    "commander": "^11.0.0",
     "handlebars": "^4.7.7"
   },
   "devDependencies": {
