@@ -1,16 +1,7 @@
 {
   "$schema": "http://json.schemastore.org/eslintrc",
-  "extends": ["plugin:astro/recommended"],
   "ignorePatterns": ["node_modules"],
   "overrides": [
-    {
-      "files": ["*.astro"],
-      "parser": "astro-eslint-parser",
-      "parserOptions": {
-        "parser": "@typescript-eslint/parser",
-        "extraFileExtensions": [".astro"]
-      }
-    },
     {
       "files": ["*.mdx"],
       "extends": "plugin:mdx/recommended"
@@ -24,7 +15,6 @@
   "parser": "@typescript-eslint/parser",
   "plugins": [
     "@typescript-eslint",
-    "astro",
     "json",
     "prettier",
     "simple-import-sort",

@@ -1,7 +1,14 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
     "skipLibCheck": true,
+    "strict": true,
+    "target": "ESNext",
     "types": ["vitest/globals"]
   },
   "include": ["src", "tests"]
