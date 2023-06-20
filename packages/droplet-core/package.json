@@ -38,7 +38,7 @@
   "devDependencies": {
     "@types/node": "^18.15.11",
     "@types/prompts": "^2.4.4",
-    "tsup": "^6.7.0",
+    "tsup": "^7.0.0",
     "typescript": "^5.0.4",
     "vitest": "^0.30.1"
   },
