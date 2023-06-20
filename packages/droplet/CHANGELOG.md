@@ -1,5 +1,13 @@
 # @dddstack/droplet
 
+## 2.1.7
+
+### Patch Changes
+
+- 82896df: Maintenance 06/20/23
+- Updated dependencies [82896df]
+  - @dddstack/droplet-core@2.1.6
+
 ## 2.1.6
 
 ### Patch Changes
